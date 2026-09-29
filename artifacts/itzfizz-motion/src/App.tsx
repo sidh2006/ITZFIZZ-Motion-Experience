@@ -14,10 +14,10 @@ gsap.registerPlugin(ScrollTrigger);
 const queryClient = new QueryClient();
 
 const metrics = [
-  { value: '01:24', label: 'Time to first frame', note: 'Illustrative studio metric' },
-  { value: '60', label: 'Frames per second', note: 'Illustrative motion target' },
-  { value: '4.8×', label: 'Perceived momentum', note: 'Illustrative experience signal' },
-  { value: '360°', label: 'Point of view', note: 'Illustrative visual range' },
+  { value: '84%', label: 'Visual clarity', note: 'Illustrative concept metric' },
+  { value: '92%', label: 'Scroll engagement', note: 'Illustrative concept metric' },
+  { value: '68%', label: 'Signal recall', note: 'Illustrative concept metric' },
+  { value: '97%', label: 'Motion consistency', note: 'Illustrative concept metric' },
 ];
 
 function MotionHome() {
@@ -166,9 +166,9 @@ function MotionHome() {
             <div className="section-kicker"><span>Signal / studio language</span></div>
             <h2 id="impact-title">Measured<br />in motion.</h2>
           </div>
-          <p>Four illustrative signals from the Fitz Motion system. Not business results — just a sharper way to see the work.</p>
+          <p>Four illustrative concept metrics from the Fitz Motion system. These are not real ITZFIZZ business results.</p>
         </div>
-        <div className="metrics reveal" aria-label="Illustrative impact metrics">
+        <div className="metrics reveal" aria-label="Illustrative concept metrics, not ITZFIZZ business results">
           {metrics.map((metric) => (
             <div className="metric" key={metric.label}>
               <span className="metric-label">{metric.label}</span>
