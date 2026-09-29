@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ITZFIZZ Motion"
+description = "A cinematic, scroll-driven automotive landing experience for ITZFIZZ, built around a premium sports car visual, expressive typography, and a responsive GSAP ScrollTrigger narrative."
+version = "1.0.0"
+id = "artifacts/itzfizz-motion"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19541
+
+[services.development]
+run = "pnpm --filter @workspace/itzfizz-motion run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/itzfizz-motion", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/itzfizz-motion/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19541"
+BASE_PATH = "/"

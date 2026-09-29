@@ -1,0 +1,196 @@
+# PROJECT: ITZFIZZ | SCROLL-DRIVEN HERO EXPERIENCE
+
+Act as a senior creative frontend developer, UI/UX designer, GSAP animation specialist, and QA engineer. Build a complete, polished, responsive web development internship assignment from start to finish.
+
+## 1. Objective
+
+Create an original, premium-quality scroll-driven hero section inspired by this reference:
+https://paraschaturvedi.github.io/car-scroll-animation
+
+The assignment is to demonstrate:
+
+* Strong frontend development skills
+* Professional UI/UX and visual design
+* GSAP animation expertise
+* Scroll-based interactions
+* Smooth, performant animations
+* Clean, understandable, maintainable code
+
+Do not simply copy the reference. Use it to understand the required interaction and create a distinctive, memorable visual experience for ITZFIZZ.
+
+## 2. Mandatory technology
+
+Use:
+
+* React
+* Vite
+* HTML
+* CSS
+* JavaScript
+* Tailwind CSS
+* GSAP
+* GSAP ScrollTrigger
+
+Use functional React components and organize the code into sensible, reusable files. Do not use a prebuilt website template or a no-code-only implementation. Do not substitute the scroll animation with a video or a time-based autoplay animation.
+
+## 3. Creative direction
+
+Design a visually distinctive automotive-inspired hero experience called "FITZ MOTION".
+
+Design language:
+
+* Cinematic, premium, editorial and modern
+* Deep charcoal or near-black background
+* Electric-lime accent color used selectively
+* Large expressive typography with generous letter spacing
+* Strong visual hierarchy and intentional negative space
+* Beautiful lighting, subtle gradients and sophisticated layering
+* A visually striking hero image of a premium sports car
+
+The final design should feel like the landing page of a high-end creative technology studio, not a generic AI-generated template.
+
+Avoid:
+
+* Excessive glassmorphism
+* Unnecessary cards and rounded boxes
+* Random floating decorative objects
+* Excessive gradients
+* Generic dashboard-style layouts
+* Overloaded text
+* Unnecessary animation that distracts from the central visual
+
+## 4. Hero section
+
+The first viewport must feel complete and visually compelling without requiring scrolling.
+
+Include:
+
+1. A small brand label or logo reading ITZFIZZ.
+2. A minimal navigation bar with suitable links such as "Experience", "About" and "Explore".
+3. A large, carefully letter-spaced headline reading "WELCOME ITZFIZZ".
+4. A short supporting line such as "Move beyond the ordinary."
+5. Four compact impact metrics with percentages and short descriptions. Use the figures and descriptions from the reference if they can be verified. If not, use clearly marked illustrative content and avoid presenting invented figures as verified business results.
+6. A premium car visual as the central visual anchor.
+7. A small scroll cue or progress indicator.
+
+Ensure the headline and metrics remain readable and visually balanced on desktop, tablet and mobile.
+
+## 5. Initial load animation
+
+On first load, use GSAP to create a smooth and elegant introduction:
+
+* Reveal the headline with a gentle fade, upward movement and staggered character or word animation.
+* Bring in the supporting line with a slight delay.
+* Reveal the four statistics sequentially with a subtle fade and vertical movement.
+* Bring in the navigation and scroll cue without distracting from the main headline.
+
+Use carefully selected durations and easing. The introduction should feel refined and not slow or theatrical.
+
+Respect prefers-reduced-motion. Provide a sensible reduced-motion experience without requiring the user to see the full animation.
+
+## 6. Scroll-driven animation (the main feature)
+
+This is the most important part of the assignment.
+
+Use GSAP ScrollTrigger to tie the main car visual's animation directly to the user's scroll progress.
+
+Requirements:
+
+* Pin or otherwise stage the hero visual during a suitable scroll interval.
+* Move the car smoothly across the scene as the user scrolls.
+* Use transform-based movement, scale and subtle rotation where appropriate.
+* Add subtle parallax to background elements only if it improves the composition.
+* Ensure the animation can be reversed smoothly when the user scrolls upward.
+* Make the animation progress respond to scroll position, not an autoplay timer.
+* Use scrub with appropriate smoothing and tune the scroll duration so it feels natural.
+* Keep all motion within the visual composition, with no accidental horizontal page overflow.
+* Ensure the headline and metrics remain legible while the animation progresses.
+
+Use a clear scroll narrative: the car should begin in one visual position, travel through the scene and arrive at a deliberate final position. Do not make it move randomly.
+
+If using a car image, choose a high-quality image with a suitable composition. Prefer an asset with a transparent background if practical. If you cannot obtain one, use a reliable, properly licensed image and integrate it into the scene elegantly. Do not use a broken image URL or an unverified local asset path.
+
+## 7. Additional design details
+
+Make the experience feel like a finished website:
+
+* Add a small, restrained footer or secondary section to make the page scrollable.
+* Use a coherent typographic system with strong display typography and legible body text.
+* Add tasteful hover states to navigation and buttons.
+* Use a responsive layout that adapts to small screens.
+* Keep the visual style consistent across the whole page.
+* Avoid excessive text or sections that dilute the hero experience.
+
+Do not add unnecessary dependencies.
+
+## 8. Performance and accessibility
+
+* Prefer transform and opacity animations.
+* Avoid expensive layout recalculations in scroll handlers.
+* Use GSAP ScrollTrigger rather than manually updating animation state on every scroll event.
+* Clean up GSAP timelines and ScrollTriggers correctly when React components unmount.
+* Avoid duplicate ScrollTriggers during hot reload.
+* Use responsive animation values and refresh ScrollTrigger after layout changes when necessary.
+* Ensure buttons and navigation are keyboard accessible.
+* Use appropriate alt text for meaningful images.
+* Ensure sufficient text contrast.
+* Handle reduced-motion preferences.
+* Avoid animation that causes flashing or uncomfortable movement.
+
+## 9. Project structure and implementation
+
+Create a clean project structure with:
+
+* A main React entry point
+* A dedicated hero component
+* A separate animation implementation or hook if appropriate
+* Well-organized CSS/Tailwind styling
+* A public asset directory for images
+* A README with setup and deployment instructions
+
+Keep the code readable and add concise comments explaining the GSAP timeline and scroll progress logic.
+
+## 10. Test the completed project
+
+Do not stop after generating the code.
+
+Run the project and verify:
+
+* It starts successfully.
+* The browser console has no major errors.
+* The initial animation works.
+* The statistics appear in sequence.
+* Scrolling drives the car animation.
+* Scrolling backward reverses the animation correctly.
+* There is no unwanted horizontal overflow.
+* The layout works on desktop and mobile.
+* Images load correctly.
+* The animation does not autoplay independently of scrolling.
+* Reduced-motion preferences are respected.
+
+Fix any issues you find before declaring the assignment complete.
+
+## 11. GitHub Pages deployment
+
+Prepare the project for deployment to GitHub Pages as a static Vite application.
+
+* Configure the correct Vite base path for the intended GitHub repository name.
+* Add a suitable build script and deployment workflow if needed.
+* Make sure assets and routes work on the deployed site.
+* Include clear instructions for publishing through GitHub Pages.
+* Do not claim the site has been published unless the deployment has actually succeeded.
+* Do not create or push to a GitHub repository without my explicit approval.
+
+## 12. Final deliverables
+
+When finished, provide:
+
+1. A concise summary of what you built.
+2. The exact files and key technologies used.
+3. Instructions for running it locally.
+4. Instructions for publishing it to GitHub Pages.
+5. A list of tests performed and their actual results.
+6. Any remaining limitations or tasks that require my action.
+7. A short explanation of how the scroll-driven animation works, so I can explain it during an internship interview.
+
+Start by inspecting the reference and creating the project. Then implement, run, test and refine the full experience. Prioritize a beautiful, distinctive result and a genuinely scroll-controlled animation over unnecessary features.
