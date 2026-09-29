@@ -172,6 +172,37 @@ button { cursor: pointer; }
 .speed-line.one { width: 31vw; right: 84%; top: 36%; }
 .speed-line.two { width: 20vw; right: 93%; top: 47%; opacity: .34; }
 .speed-line.three { width: 24vw; left: 84%; top: 54%; opacity: .25; }
+.hero-metrics {
+  position: absolute;
+  z-index: 4;
+  left: clamp(20px, 9vw, 144px);
+  bottom: clamp(72px, 10vh, 108px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(650px, calc(100% - clamp(40px, 18vw, 288px)));
+  border-top: 1px solid rgba(230, 231, 222, .2);
+  pointer-events: none;
+}
+.hero-metrics-label {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 0 2px;
+  color: var(--lime);
+  font: 700 8px/1 var(--font-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.hero-metrics-label span { color: var(--paper-muted); font-weight: 400; }
+.hero-metrics .metric {
+  min-height: 0;
+  padding: 13px 16px 0 0;
+  border-right: 1px solid rgba(230, 231, 222, .16);
+}
+.hero-metrics .metric + .metric { padding-left: 16px; }
+.hero-metrics .metric:last-child { border-right: 0; }
+.hero-metrics .metric-label { min-height: 28px; font-size: 8px; }
+.hero-metrics .metric-value { margin-top: 10px; font-size: clamp(26px, 3vw, 42px); }
+.hero-metrics .metric-note { display: none; }
 .hero-side-note { position: absolute; right: clamp(20px, 4vw, 64px); bottom: 15vh; z-index: 3; color: var(--paper-muted); font: 400 9px/1.6 var(--font-mono); letter-spacing: .12em; text-align: right; text-transform: uppercase; }
 .hero-side-note strong { display: block; color: var(--paper); font-size: 11px; font-weight: 400; }
 .scroll-cue {
@@ -250,6 +281,18 @@ button { cursor: pointer; }
   .hero-title { font-size: clamp(63px, 18vw, 130px); line-height: .83; }
   .hero-subtitle { margin: 29px 0 0 5px; font-size: 12px; }
   .hero-car-wrap { width: 112vw; transform: translate(-47%, 2%); }
+  .hero-metrics {
+    left: 20px;
+    right: 20px;
+    bottom: 63px;
+    width: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-metrics .metric { padding-right: 12px; padding-bottom: 9px; }
+  .hero-metrics .metric + .metric { padding-left: 12px; }
+  .hero-metrics .metric:nth-of-type(even) { border-right: 0; }
+  .hero-metrics .metric:nth-of-type(n + 3) { border-top: 1px solid rgba(230, 231, 222, .16); }
+  .hero-metrics .metric-value { font-size: 30px; }
   .hero-side-note { display: none; }
   .scroll-progress { right: 13px; }
   .section { padding: 105px 20px; }

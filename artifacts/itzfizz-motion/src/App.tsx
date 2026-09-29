@@ -47,8 +47,11 @@ function MotionHome() {
       const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
       intro
         .from(navRef.current, { y: -18, opacity: 0, duration: 0.8 })
-        .from('.hero-copy > *', { y: 24, opacity: 0, duration: 0.9, stagger: 0.1 }, '-=0.45')
+        .from('.eyebrow', { y: 20, opacity: 0, duration: 0.7 }, '-=0.45')
+        .from('.hero-title span', { y: 34, opacity: 0, duration: 0.75, stagger: 0.1 }, '-=0.45')
+        .from('.hero-subtitle', { y: 20, opacity: 0, duration: 0.75 }, '-=0.48')
         .from(car, { x: -90, opacity: 0, scale: 0.86, duration: 1.3 }, '-=0.8')
+        .from('.hero-metrics .metric', { y: 18, opacity: 0, duration: 0.55, stagger: 0.09 }, '-=0.45')
         .from([sideNoteRef.current, scrollCueRef.current], { opacity: 0, duration: 0.65 }, '-=0.4');
 
       const scene = gsap.timeline({
@@ -140,6 +143,17 @@ function MotionHome() {
             <span className="speed-line three" />
             <span className="car-shadow" />
             <img className="hero-car" src={carAsset} alt="Graphite concept hypercar with an electric-lime accent, shown in motion" />
+          </div>
+          <div className="hero-metrics" aria-label="Illustrative concept metrics, not ITZFIZZ business results">
+            <p className="hero-metrics-label">
+              Concept readout <span>/ illustrative only</span>
+            </p>
+            {metrics.map((metric) => (
+              <div className="metric" key={`hero-${metric.label}`}>
+                <span className="metric-label">{metric.label}</span>
+                <strong className="metric-value">{metric.value}</strong>
+              </div>
+            ))}
           </div>
           <p ref={sideNoteRef} className="hero-side-note">
             <strong>Motion study / 01</strong>
